@@ -1,0 +1,72 @@
+<div id="verProductsHome">
+    {{#if user}}
+    <div>
+            <h1>Hola, {{user.name}}</h1>
+            <p>Correo: {{user.email}}</p>
+            <p>Rol : {{user.role}}</p>
+            <a href="/api/sessions/logout"><button>Salir</button></a>
+    </div>
+
+
+    {{/if}}
+    <div id="mostrarProductos">   
+        {{#if product}}  
+            <h1>Productos</h1>
+        {{/if}} 
+        <div class="mostrarProductosCart">
+        {{#if product}}            
+            {{#each product}}
+                <div id="cart">
+                        <p><span class="keyDer"> ID : </span>{{this._id}}</p>
+                        <p><span class="keyDer"> TITULO : </span> {{this.title}}</p>
+                        <p><span class="keyDer"> DESCRIPCION : </span> {{this.description}}</p>
+                        <p><span class="keyDer"> PRECIO: </span> ${{this.price}}</p>
+                        <p><span class="keyDer"> THUMBNAIL : </span> {{this.thumbnail}} </p>
+                        <p><span class="keyDer"> CODIGO : </span> {{this.code}}  </p>
+                        <p><span class="keyDer"> STOCK : </span> {{this.stock}}</p>
+                        <p><span class="keyDer"> CATEGORIA : </span> {{this.category}}</p>
+                        <p><span class="keyDer"> STATUS: </span> {{this.status}} </p>   
+                         <button>Agregar al carrito</button>                                        
+                </div>
+            {{/each}} 
+        {{/if}}  
+        </div>       
+        <div class="contendorBotones">
+            {{#if hasPrevPage}}
+                <a href="/products/?page={{prevPage}}&&limit={{limit}}&&sort={{sort}}&&category={{category}}&&status={{status}}" class="botonPaginas"><button>Anterior</button></a>
+            {{/if}}     
+        
+                {{page}}        
+        
+            {{#if hasNextPage}}
+                <a href="/products/?page={{nextPage}}&&limit={{limit}}&&sort={{sort}}&&category={{category}}&&status={{status}}" class="botonPaginas"><button>Siguiente</button></a>
+            {{/if}}
+        </div>
+
+     </div>
+      <div class="mostrarCarrito">
+            {{#if carritoId}}
+                    <h1>Carrito</h1>
+                    <div>
+                         <p><span class="keyDer"> ID Carrito:</span>{{carritoId._id}}</p>                    
+                    </div>     
+                    <div class="productosCarritoContenedor">             
+                    {{#each carritoId.products}}
+                    
+                        <div id="cart">
+                            <p><span class="keyDer"> ID Producto: </span>{{this.product._id}}</p>
+                            <p><span class="keyDer"> Cantidad : </span> {{this.quantity}}</p>
+                            <p><span class="keyDer"> DESCRIPCION : </span> {{this.product.description}}</p>
+                            <p><span class="keyDer"> PRECIO: </span> ${{this.product.price}}</p>                        
+                            <p><span class="keyDer"> THUMBNAIL : </span> {{this.product.thumbnail}} </p>
+                            <p><span class="keyDer"> CODIGO : </span> {{this.product.code}}  </p>
+                            <p><span class="keyDer"> STOCK : </span> {{this.product.stock}}</p>
+                            <p><span class="keyDer"> CATEGORIA : </span> {{this.product.category}}</p>
+                            <p><span class="keyDer"> STATUS: </span> {{this.product.status}} </p>
+                        </div>                    
+                    {{/each}}
+                    </div>
+            {{/if}} 
+        </div>
+</div>
+<script src="/js/home.js"></script>

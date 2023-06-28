@@ -1,0 +1,68 @@
+[
+	{
+		"id": 1,
+		"title": "iPhone 13",
+		"description": "The latest iPhone with 5G technology and improved camera.",
+		"price": 999.99,
+		"thumbnail": [],
+		"code": "IPHN13",
+		"stock": 100,
+		"category": "Electronics",
+		"status": "available"
+	},
+	{
+		"id": 3,
+		"title": "Macbook Pro",
+		"description": "The latest Macbook Pro features the powerful M1 chip and a 13-inch Retina display.",
+		"price": 1299.99,
+		"thumbnail": [],
+		"code": "MBP13",
+		"stock": 20,
+		"category": "Computers",
+		"status": "available"
+	},
+	{
+		"id": 5,
+		"title": "modificado",
+		"description": "The Canon EOS R6 is a full-frame mirrorless camera with 20fps shooting and 4K video recording.",
+		"price": 1111,
+		"thumbnail": [],
+		"code": "CEOSR6",
+		"stock": 10,
+		"category": "Cameras",
+		"status": "available"
+	},
+	{
+		"id": 6,
+		"title": "Nintendo Switch",
+		"description": "The Nintendo Switch is a versatile gaming console that can be played on a TV or on-the-go.",
+		"price": 299.99,
+		"thumbnail": [],
+		"code": "NSW",
+		"stock": 30,
+		"category": "Gaming",
+		"status": "available"
+	},
+	{
+		"title": "xiaomi note 9",
+		"description": "celular xiaomi",
+		"price": 50000,
+		"thumbnail": [],
+		"code": "xia9n",
+		"stock": 20,
+		"category": "celular",
+		"status": true,
+		"id": 7
+	},
+	{
+		"title": "PS5",
+		"description": "playstation 5 new gen",
+		"price": "300000",
+		"thumbnail": "aaa",
+		"code": "PS501",
+		"stock": "30",
+		"category": "Consola",
+		"status": "true",
+		"id": 8
+	}
+]
